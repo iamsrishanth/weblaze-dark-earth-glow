@@ -31,9 +31,9 @@ const SplineViewer = () => {
   }, []);
 
   return (
-    <div className="w-full h-full relative">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="w-[200%] h-full -ml-[50%]" ref={containerRef}>
+    <div className="w-full h-full relative overflow-hidden">
+      <div className="absolute -right-1/4 top-0 w-[150%] h-full">
+        <div className="w-full h-full" ref={containerRef}>
           {/* Spline viewer will be inserted here */}
         </div>
       </div>
