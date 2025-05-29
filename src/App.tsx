@@ -44,7 +44,7 @@ const AppContent = () => (
     <div className="flex-1 flex flex-col">
       <Header />
       <main className="flex-1 flex pt-20">
-        <div className="flex-1 px-4 md:px-8 py-8">
+        <div className="flex-1 w-[70%] px-4 md:px-8 py-8">
           <PageWrapper>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -56,7 +56,7 @@ const AppContent = () => (
             </Routes>
           </PageWrapper>
         </div>
-        <div className="hidden lg:block w-1/2 relative overflow-hidden">
+        <div className="hidden lg:block w-[30%] h-screen fixed right-0 top-0">
           <SplineViewer />
         </div>
       </main>
