@@ -40,11 +40,11 @@ const PageWrapper = ({ children }: { children: React.ReactNode }) => {
 };
 
 const AppContent = () => (
-  <div className="min-h-screen gradient-bg text-white flex">
-    <div className="flex-1 flex flex-col">
+  <div className="min-h-screen gradient-bg text-white flex relative">
+    <div className="flex-1 flex flex-col relative z-10">
       <Header />
       <main className="flex-1 flex pt-20">
-        <div className="flex-1 w-[70%] px-4 md:px-8 py-8">
+        <div className="flex-1 w-[70%] px-4 md:px-8 py-8 relative z-20">
           <PageWrapper>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -56,10 +56,10 @@ const AppContent = () => (
             </Routes>
           </PageWrapper>
         </div>
-        <div className="hidden lg:block w-[30%] h-screen fixed right-0 top-0">
-          <SplineViewer />
-        </div>
       </main>
+    </div>
+    <div className="hidden lg:block w-[30%] h-screen fixed right-0 top-0 -z-10">
+      <SplineViewer />
     </div>
   </div>
 );

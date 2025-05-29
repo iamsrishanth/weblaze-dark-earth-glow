@@ -17,6 +17,8 @@ const SplineViewer = () => {
         splineViewer.setAttribute('url', 'https://prod.spline.design/1vfkGuDjtcs43zf0/scene.splinecode');
         splineViewer.style.width = '100%';
         splineViewer.style.height = '100%';
+        splineViewer.style.opacity = '0.3';
+        splineViewer.style.filter = 'hue-rotate(280deg) saturate(1.5) brightness(1.2)';
         containerRef.current.appendChild(splineViewer);
       }
     };
@@ -31,9 +33,9 @@ const SplineViewer = () => {
   }, []);
 
   return (
-    <div className="w-full h-full relative overflow-hidden">
-      <div className="absolute -left-1/2 top-0 w-[200%] h-full">
-        <div className="w-full h-full" ref={containerRef}>
+    <div className="w-full h-full relative overflow-hidden -z-10">
+      <div className="absolute right-0 top-0 w-[150%] h-full transform translate-x-1/3">
+        <div className="w-full h-full opacity-60" ref={containerRef}>
           {/* Spline viewer will be inserted here */}
         </div>
       </div>
